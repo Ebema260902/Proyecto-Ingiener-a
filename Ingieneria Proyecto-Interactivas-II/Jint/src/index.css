@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    z-index: 60;
+}
+
+.swiper-wrapper {
+    padding-bottom: 1.5rem;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .swiper-pagination-bullet {
+    background-color: transparent;
+    border: solid 2px rgb(146, 12, 187);
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-right: 6px;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.pagination .swiper-pagination-bullet-active {
+    background-color: rgb(146, 12, 187);
+    opacity: 1;
+}
+
+
+.cont-notifications {
+    height: 100%;
+    position: relative;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-left: 5px solid transparent;
+    border: #000000;
+}
+
+
+
+.notification-panel {
+    top: 0;
+    left: -50rem;
+    position: fixed;
+    z-index: 30;
+    height: 100%;
+    transition: left 0.3s ease;
+}
+
+.notification-panel.active {
+    left: 13rem;
+}
+
+.cont-notifications nav div {
+    color: black;
+    transition: all 10ms ease;
+}
+
+.cont-notifications nav a:hover {
+    border-left: 3px solid rgb(194, 87, 194);
+}
+
+.search {
+    width: 21rem;
+}
+
+.search-icon {
+    margin-left: 19rem;
+}
+
+.configuration {
+    position: relative;
+}
+
+.theme {
+    position: relative;
+    left: 28%;
+}
+.img-arrow {
+    position: relative;
+}
+
+/* Clases del Componente calendario */
+calendar-range {
+    width: 100%;
+}
+
+calendar-month {
+    --color-accent: #7048e8;
+    --color-text-on-accent: #ffffff;
+    width: 100%;
+}
+
+.MuiGauge-root text{
+    color: white;
+}
+
+.border-extra-thin {
+    border: 0.5px solid black; /* Grosor del borde */
+}
+
+.MuiYearCalendar{
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .notification-panel {
+        width: 100%;
+        left: -100%;
+    }
+
+    .notification-panel.active {
+        left: 0;
+    }
+
+    .cont-notifications {
+        width: 100%;
+    }
+
+    .search {
+        width: 22rem;
+    }
+
+    .search-icon {
+        margin-left: 20rem;
+    }
+
+    .notification-panel {
+        left: -120%;
+    }
+
+    .theme {
+        left: 5rem;
+    }
+
+    .img-arrow {
+        width: 24px;
+        left: 2rem;
+    }
+}
+
+
